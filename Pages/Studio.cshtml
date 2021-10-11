@@ -1,0 +1,27 @@
+﻿@page
+
+@using Model;
+
+@model Movies.Pages.StudioModel
+@{
+    <div>
+        <h1>Liste af alle studier</h1>
+        @foreach(var studio in @Model.Studios)
+            {
+                <div>
+                    <td>
+                        <br />
+                        Navn:
+                        @studio._name <br />
+                        Lokation:
+                        @studio._hqCity <br />
+                        Medarbejdere:
+                        @studio._noOfEmployees <br />
+                        _____________________
+                    </td>
+                    
+                </div>
+            }
+    </div>
+
+}
